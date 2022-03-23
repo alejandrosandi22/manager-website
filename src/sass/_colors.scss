@@ -1,0 +1,24 @@
+:root {
+  --bg-color: #E0E0E0;
+  --primary: #14151B;
+  --second-bg: #303240;
+  --font-color: #111;
+  --link-color: #848484;
+  --second-link: #B7B8BF;
+  .dark {
+    --bg-color: #111;
+    --primary: #14151B;
+    --second-bg: #303240;
+    --font-color: #E0E0E0;
+    --link-color: #848484;
+    --second-link: #222;
+  }
+  .light {
+    --bg-color: #E0E0E0;
+    --primary: #14151B;
+    --second-bg: #303240;
+    --font-color: #111;
+    --link-color: #848484;
+    --second-link: #B7B8BF;
+  }
+}
