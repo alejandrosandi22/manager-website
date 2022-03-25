@@ -5,4 +5,6 @@
   min-height: 300vh;
   width: 100%;
   overflow: hidden;
+  background: var(--bg-color);
+  transition: .5s;
 }

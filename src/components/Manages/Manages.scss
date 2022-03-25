@@ -1,0 +1,33 @@
+.manages {
+  position: relative;
+  width: 100%;
+  background: var(--bg-color);
+  transition: .5s;
+  .section {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10rem 0;
+    .text-wrapper {
+      width: 45%;
+      height: 25rem;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      .title {
+        color: var(--font-color);
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 100;
+        border-bottom: 0.1rem solid var(--link-color);
+      }
+      .text {
+        color: var(--font-color);
+        font-size: 1.8rem;
+      }
+    }
+    .img {
+      height: 25rem;
+      filter: drop-shadow( 0 2rem 1rem var(--second-link));
+    }
+  }
+}

@@ -3,11 +3,10 @@ import './Header.scss';
 import undraw from '../../assets/undraw_organizing_projects_re_9p1k.svg';
 
 export default function Header() {
-
   return (
     <div className='header'>
       <div className='text-wrapper'>
-        <p>Organize</p>
+        <h2>Organize</h2>
         <p>your life</p>
       </div>
       <div className='image-wrapper'>

@@ -5,6 +5,11 @@
   --font-color: #111;
   --link-color: #848484;
   --second-link: #B7B8BF;
+  --shadow1: #13121a;
+  --shadow2: #4b4a68;
+  --gradient: linear-gradient(145deg, #F0F0F0, #CACACA);
+  --n-shadow1: #5A5A5A;
+  --n-shadow2: #FFF;
   .dark {
     --bg-color: #111;
     --primary: #14151B;
@@ -12,6 +17,11 @@
     --font-color: #E0E0E0;
     --link-color: #848484;
     --second-link: #222;
+    --shadow1: #474361;
+    --shadow2: #6f6d9c;
+    --gradient: linear-gradient(145deg, #121212, #0f0f0f);
+    --n-shadow1: #070707;
+    --n-shadow2: #1b1b1b;
   }
   .light {
     --bg-color: #E0E0E0;
@@ -20,5 +30,10 @@
     --font-color: #111;
     --link-color: #848484;
     --second-link: #B7B8BF;
+    --shadow1: #13121a;
+    --shadow2: #4b4a68;
+    --gradient: linear-gradient(145deg, #F0F0F0, #CACACA);
+    --n-shadow1: #5A5A5A;
+    --n-shadow2: #FFF;
   }
 }
