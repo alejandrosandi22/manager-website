@@ -1,3 +1,5 @@
+@use '../../sass/responsive';
+
 .manages {
   position: relative;
   width: 100%;
@@ -6,23 +8,25 @@
   .section {
     display: flex;
     justify-content: space-evenly;
-    margin: 10rem 0;
+    padding: 4rem 0;
     .text-wrapper {
       width: 45%;
       height: 25rem;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
       flex-direction: column;
       .title {
         color: var(--font-color);
         font-size: 3rem;
         text-transform: uppercase;
         font-weight: 100;
+        margin-bottom: 2rem;
         border-bottom: 0.1rem solid var(--link-color);
       }
       .text {
         color: var(--font-color);
         font-size: 1.8rem;
+        font-weight: 300;
       }
     }
     .img {
@@ -31,3 +35,5 @@
     }
   }
 }
+
+@include responsive.manages();
