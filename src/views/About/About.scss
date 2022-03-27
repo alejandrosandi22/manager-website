@@ -1,3 +1,5 @@
+@use '../../sass/responsive';
+
 .about {
   min-height: 100vh;
   overflow: hidden;
@@ -28,3 +30,5 @@
     height: 25rem;
   }
 }
+
+@include responsive.about();

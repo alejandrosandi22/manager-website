@@ -6,7 +6,7 @@ import Error from './views/Error/Error';
 import { useLocalStorage } from './services/localStorage';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 
 export const ThemeContext = React.createContext<any>(null);
@@ -30,7 +30,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
-            <Route path='**' element={<Error />}/>
+            <Route path="/not-found" element={<Error />} />
+            <Route path='*' element={<Navigate to='/not-found' />}/>
           </Routes>
         </div>
       </ThemeContext.Provider>

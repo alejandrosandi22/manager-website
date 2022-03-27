@@ -147,3 +147,14 @@
     }
   }
 }
+
+@mixin about {
+  @media (max-width: 1024px) {
+    .about {
+      .about-wrapper {
+        flex-direction: column;
+        gap: 5rem
+      }
+    }
+  }
+}

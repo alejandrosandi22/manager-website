@@ -6,7 +6,6 @@ import gym from '../../assets/undraw_healthy_habit_bh-5-w.svg';
 import projects from '../../assets/undraw_project_completed_re_pqqq.svg';
 
 export default function Manages(props: any) {
-  console.log(props)
   return (
     <div ref={props.manages} id="manages" className='manages'>
       <div data-aos="fade-up" data-aos-anchor-placement="top-center" className='projects section'>
