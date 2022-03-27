@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Services.scss';
 import calendar from '../../assets/undraw_online_calendar_re_wk3t.svg';
 import meetings from '../../assets/undraw_meeting_re_i53h.svg';
 import task from '../../assets/undraw_to_do_list_re_9nt7.svg';
 
-export default function Services() {
+export default function Services(props: any) {
 
   const [ translate, setTranslate ] = useState<any>({});
   let [ slide, setSlide ] = useState<number>(0);
@@ -42,7 +42,7 @@ export default function Services() {
   }
 
   return (
-    <div className='services'>
+    <div ref={props.services} id='services' className='services'>
       <div className='services-wrapper'>
         <div className='service calendar' style={translate}>
           <img src={calendar} alt="calendar" />

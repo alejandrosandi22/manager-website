@@ -1,3 +1,5 @@
+@use '../../sass/responsive';
+
 .header {
   position: relative;
   width: 100%;
@@ -9,8 +11,10 @@
   background: var(--bg-color);
   transition: .5s;
   .text-wrapper {
+    display: flex;
+    flex-direction: column;
     border-right: .1rem solid var(--font-color);
-    padding: 2rem 3.5rem 5rem 0;
+    padding: 2rem 3.5rem 4rem 0;
     h2 {
       font-weight: 100;
       color: var(--font-color);
@@ -24,6 +28,34 @@
       font-size: 2.5rem;
       text-align: end;
     }
+    button {
+      align-self: flex-end;
+      margin-top: 2rem;
+      border: unset;
+      background: linear-gradient(145deg, #f0f0f0, #cacaca);
+      box-shadow:  .1rem .1rem .5rem #5a5a5a,
+      -.1rem -.1rem .5rem #ffffff;
+      font-size: 1.2rem;
+      width: 8rem;
+      height: 3rem;
+      border-radius: .5rem;
+      cursor: pointer;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: #111;
+        text-decoration: none;
+      }
+      &:hover {
+        filter: brightness(120%);
+      }
+      &:active {
+        transform: scale(.97);
+      }
+    }
   }
   .image-wrapper {
     position: relative;
@@ -33,3 +65,5 @@
     }
   }
 }
+
+@include responsive.header();

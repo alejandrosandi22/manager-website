@@ -8,6 +8,7 @@ export default function Header() {
       <div className='text-wrapper'>
         <h2>Organize</h2>
         <p>your life</p>
+        <button className='join-now'><a href='https://app.manager-app.ml' target='_blank' >Join Now</a></button>
       </div>
       <div className='image-wrapper'>
         <img draggable='false' src={undraw} alt="undraw" />

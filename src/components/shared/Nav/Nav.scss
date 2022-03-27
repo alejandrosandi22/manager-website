@@ -1,3 +1,5 @@
+@use '../../../sass/responsive';
+
 .nav {
   z-index: 100;
   position: fixed;
@@ -20,64 +22,66 @@
     list-style: none;
     display: flex;
     align-items: center;
-    li {
+    .li {
       font-size: 1.1rem;
       margin: 0 1.5rem;
       color: var(--link-color);
+      text-decoration: none;
       cursor: pointer;
-      &:hover:not(:last-child) {
+      &:hover {
         color: var(--font-color);
       }
-      &:last-child {
-        color: var(--font-color);
-        .checkbox{
-          all: unset;
-          border-radius: .5rem;
-          display: flex;
-          align-items: center;
-          width: 3.6rem;
-          height: 1.5rem;
-          cursor: pointer;
-          &::before{
-            content: '\f185';
-            font-family: "Font Awesome 5 Free";
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: .5s;
-          }
-        }
-        .light-mode{
-          background: #e0e0e0;
-          box-shadow: inset 4px 4px .1rem #5a5a5a,
-                      inset -4px -4px .1rem #ffffff;
-          &::before{
-            content: '\f186';
-            background: #e0e0e0;
-            box-shadow: inset 1px 1px 2px #5a5a5a,
-                  inset -1px -1px 2px #ffffff;
-            transform: translateX(-10%);
-            transition: .5s;
-          }
-        }
-        .dark-mode{
-          background: #141414;
-          box-shadow: inset 4px 4px 1px #080808,
-                      inset -4px -4px 1px #202020;
-          &::before{
-            content: '\f185';
-            color: #fff;
-            background: #141414;
-            box-shadow: inset 5px 5px 10px #080808,
-                        inset -5px -5px 10px #202020;
-            transform: translateX(100%);
-            transition: .5s;
-          }
-        }
+    }
+  }
+  .li-toggle {
+    color: var(--font-color);
+    margin: 0 1.5rem;
+    .checkbox{
+      all: unset;
+      border-radius: .5rem;
+      display: flex;
+      align-items: center;
+      width: 3.6rem;
+      height: 1.5rem;
+      cursor: pointer;
+      &::before{
+        content: '\f185';
+        font-family: "Font Awesome 5 Free";
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+      }
+    }
+    .light-mode{
+      background: #e0e0e0;
+      box-shadow: inset 4px 4px .1rem #5a5a5a,
+                  inset -4px -4px .1rem #ffffff;
+      &::before{
+        content: '\f186';
+        background: #e0e0e0;
+        box-shadow: inset 1px 1px 2px #5a5a5a,
+              inset -1px -1px 2px #ffffff;
+        transform: translateX(-10%);
+        transition: .5s;
+      }
+    }
+    .dark-mode{
+      background: #141414;
+      box-shadow: inset 4px 4px 1px #080808,
+                  inset -4px -4px 1px #202020;
+      &::before{
+        content: '\f185';
+        color: #fff;
+        background: #141414;
+        box-shadow: inset 5px 5px 10px #080808,
+                    inset -5px -5px 10px #202020;
+        transform: translateX(100%);
+        transition: .5s;
       }
     }
   }
@@ -87,3 +91,5 @@
   transform: translateY(-100%);
   transition: .5s;
 }
+
+@include responsive.nav();

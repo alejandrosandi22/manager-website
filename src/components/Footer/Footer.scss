@@ -1,3 +1,5 @@
+@use '../../sass/responsive';
+
 .footer {
   position: relative;
   width: 100%;
@@ -46,7 +48,17 @@
       width: 10rem;
       height: 4.5rem;
       border-radius: .5rem;
+      overflow: hidden;
       cursor: pointer;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: #111;
+        text-decoration: none;
+      }
       &:hover {
         filter: brightness(120%);
       }
@@ -64,3 +76,5 @@
     color: #E0E0E0;
   }
 }
+
+@include responsive.footer();

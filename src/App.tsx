@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
 import './App.scss';
-import Page from "./page/Page";
+import Home from './views/Home/Home';
+import About from './views/About/About';
+import Error from './views/Error/Error';
 import { useLocalStorage } from './services/localStorage';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 export const ThemeContext = React.createContext<any>(null);
@@ -21,11 +24,17 @@ function App() {
   }, [])
 
   return (
-    <ThemeContext.Provider value={changeTheme}>
-      <div className={`App ${!theme ? 'ligth' : 'dark'}`}>
-        <Page />
-      </div>
-    </ThemeContext.Provider>
+    <BrowserRouter>
+      <ThemeContext.Provider value={changeTheme}>
+        <div className={`App ${!theme ? 'ligth' : 'dark'}`}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='**' element={<Error />}/>
+          </Routes>
+        </div>
+      </ThemeContext.Provider>
+    </BrowserRouter>
   );
 }
 
